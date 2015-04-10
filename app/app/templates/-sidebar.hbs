@@ -1,7 +1,13 @@
 <aside class='sidebar'>
 
   <ul class="nav nav-pills nav-stacked nav-filters">
-    <li class='text-info'>
+      <li class='text-info'>
+        {{#link-to 'jobs.feed' (query-params filter='inProgress')}}
+            <div class='text-overflow'>In Progress</div>
+            <span class='badge pull-right'>{{meta.inProgress}}</span>
+        {{/link-to}}
+      </li>
+      <li class='text-info'>
       {{#link-to 'jobs.feed' (query-params filter='future')}}
         <div class='text-overflow'>Future</div>
         <span class='badge pull-right'>{{meta.future}}</span>
